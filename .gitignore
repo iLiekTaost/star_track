@@ -1,3 +1,4 @@
+.env
 .venv
 star_track.code-workspace
 __pycache__/
