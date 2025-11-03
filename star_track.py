@@ -38,11 +38,9 @@ def get_coordinates(name: str) -> Tuple[float, float]:
 def main():
     args = parse_args()
     if args.name:
-        # convert name to a pair of coordinates
-        right_ascension, declination = get_coordinates(args.name)
+        return begin_track_by_name(args.name)
     else:
-        right_ascension, declination = args.coords
-    return begin_track(right_ascension, declination)
+        return begin_track_by_coords(args.LAT, args.LON)
 
 if __name__ == '__main__':
     sys.exit(main())
